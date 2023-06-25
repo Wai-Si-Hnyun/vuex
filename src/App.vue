@@ -1,28 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <product-list-one />
+    <product-list-two />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {store} from "@/store/store";
+import ProductListOne from "@/components/ProductListOne.vue";
+import ProductListTwo from "@/components/ProductListTwo.vue";
 
 export default {
+  store,
   name: 'App',
   components: {
-    HelloWorld
+    ProductListOne,
+    ProductListTwo
+  },
+  data() {
+    return {
+
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
